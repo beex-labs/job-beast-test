@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="牛马检测器 — 测测这份岗位到底是什么物种">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffe88f"/>
+      <stop offset="100%" stop-color="#ff8a00"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#f5f4ec"/>
+  <rect x="60" y="60" width="1080" height="510" rx="36" fill="url(#bg)" stroke="#20251f" stroke-width="8"/>
+  <g fill="#20251f" font-family="system-ui, sans-serif" font-weight="800">
+    <text x="120" y="230" font-size="84">🐾 牛马检测器</text>
+    <text x="120" y="320" font-size="44" font-weight="700">测测这份岗位到底是什么物种</text>
+    <text x="120" y="400" font-size="30" font-weight="600">Shareholder · Enjoyer · Offer · Worker</text>
+    <text x="120" y="450" font-size="30" font-weight="600">Joker · Loser · Volunteer · 牛马</text>
+    <text x="120" y="520" font-size="24" font-weight="500" fill="#20251f" opacity="0.7">评价的是岗位，不是求职者</text>
+  </g>
+</svg>

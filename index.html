@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f7f5ee" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0e1210" media="(prefers-color-scheme: dark)" />
+    <meta name="description" content="牛马检测器通过收入、时间、边界、成长、稳定、自由和福利七个维度，给岗位生成一个娱乐向的含金量评级。所有岗位输入默认在浏览器本地计算，服务器只接收最终评级。" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>牛马检测器 · Job Beast Test</title>
+    <script>
+      // Apply persisted/system theme before first paint to avoid flash.
+      (function () {
+        try {
+          var stored = localStorage.getItem("job_beast_theme_v1");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var theme = stored === "light" || stored === "dark" ? stored : (prefersDark ? "dark" : "light");
+          document.documentElement.dataset.theme = theme;
+        } catch (e) {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

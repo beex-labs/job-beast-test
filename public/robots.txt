@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Hash-based share results are not indexed individually.
+Disallow: /result#

@@ -1,0 +1,121 @@
+/* ===== SEED TOKENS (for Nudge control) ===== */
+:root {
+  --seed-bg: #f5f5f7;
+  --seed-fg: #1d1d1f;
+  --seed-primary: #0071e3;
+  --seed-accent: #ff9f0a;
+  --seed-surface: #ffffff;
+  --seed-danger: #ff3b30;
+  --seed-success: #34c759;
+  --seed-joker: #ff648c;
+  --seed-volunteer: #9b5cff;
+  --seed-inverse: #1d1d1f;
+  --seed-radius: 18px;
+}
+
+/* ===== DESIGN TOKENS ===== */
+:root {
+  /* Layout */
+  --content-max: 640px;
+  --content-max-wide: 860px;
+  --gutter: 16px;
+
+  /* Radii — Apple tiers, derived from seed */
+  --radius-xs: calc(var(--seed-radius) * 0.28);
+  --radius-sm: calc(var(--seed-radius) * 0.44);
+  --radius-md: calc(var(--seed-radius) * 0.67);
+  --radius-lg: var(--seed-radius);
+  --radius-xl: calc(var(--seed-radius) * 1.56);
+  --radius-2xl: calc(var(--seed-radius) * 2);
+  --radius-pill: 980px;
+
+  /* Spacing — 8px base, Apple rhythm */
+  --space-1: 2px;
+  --space-2: 4px;
+  --space-3: 8px;
+  --space-4: 12px;
+  --space-5: 16px;
+  --space-6: 20px;
+  --space-7: 24px;
+  --space-8: 32px;
+  --space-9: 40px;
+  --space-10: 48px;
+  --space-11: 64px;
+  --space-12: 80px;
+
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Icons",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  --font-display: "SF Pro Display", -apple-system, BlinkMacSystemFont,
+    "SF Pro Icons", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Helvetica Neue", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+
+  /* Font sizes — mobile-first */
+  --fs-2xs: 10px;
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-base: 17px;
+  --fs-md: 17px;
+  --fs-lg: 19px;
+  --fs-xl: 24px;
+  --fs-2xl: 28px;
+  --fs-3xl: 32px;
+  --fs-hero: 40px;
+  --fs-score: 56px;
+
+  /* Line heights */
+  --lh-tight: 1.07;
+  --lh-snug: 1.21;
+  --lh-normal: 1.47;
+  --lh-relaxed: 1.65;
+
+  /* Motion — Apple ease curves */
+  --dur-fast: 100ms;
+  --dur-base: 200ms;
+  --dur-slow: 350ms;
+  --dur-slower: 500ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Z-index */
+  --z-header: 100;
+  --z-bottombar: 110;
+  --z-sheet: 120;
+  --z-overlay: 130;
+  --z-toast: 140;
+
+  /* Touch targets */
+  --hit: 44px;
+  --hit-sm: 36px;
+
+  /* Range */
+  --track-h: 4px;
+  --thumb: 28px;
+
+  /* Safe areas */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+
+/* ===== RESPONSIVE — Desktop scale-up overrides ===== */
+@media (min-width: 768px) {
+  :root {
+    --content-max: 680px;
+    --content-max-wide: 960px;
+    --gutter: 24px;
+    --fs-base: 17px;
+    --fs-md: 17px;
+    --fs-lg: 19px;
+    --fs-xl: 26px;
+    --fs-2xl: 32px;
+    --fs-3xl: 38px;
+    --fs-hero: 48px;
+    --fs-score: 72px;
+  }
+}

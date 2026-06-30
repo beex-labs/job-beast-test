@@ -1,0 +1,159 @@
+/* ===== LIGHT THEME — derived from seed tokens ===== */
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --page-bg: var(--seed-bg);
+  --page-bg-subtle: color-mix(in srgb, var(--seed-bg), var(--seed-fg) 4%);
+
+  --surface: var(--seed-surface);
+  --surface-secondary: var(--seed-bg);
+  --surface-tertiary: color-mix(in srgb, var(--seed-bg), var(--seed-fg) 10%);
+  --surface-elevated: var(--seed-surface);
+
+  --text-primary: var(--seed-fg);
+  --text-secondary: color-mix(in srgb, var(--seed-fg), transparent 55%);
+  --text-tertiary: color-mix(in srgb, var(--seed-fg), transparent 65%);
+  --text-inverse: var(--seed-surface);
+
+  --border-default: color-mix(in srgb, var(--seed-fg), transparent 80%);
+  --border-subtle: color-mix(in srgb, var(--seed-fg), transparent 88%);
+  --border-strong: color-mix(in srgb, var(--seed-fg), transparent 45%);
+
+  --primary: var(--seed-primary);
+  --primary-hover: color-mix(in srgb, var(--seed-primary), black 12%);
+  --primary-active: color-mix(in srgb, var(--seed-primary), black 22%);
+  --primary-text: var(--seed-surface);
+  --primary-bg: color-mix(in srgb, var(--seed-primary), transparent 88%);
+  --primary-bg-strong: color-mix(in srgb, var(--seed-primary), transparent 78%);
+  --primary-border: var(--seed-primary);
+
+  --accent: var(--seed-accent);
+  --accent-hover: color-mix(in srgb, var(--seed-accent), black 12%);
+  --accent-text: color-mix(in srgb, var(--seed-accent), black 55%);
+  --accent-bg: color-mix(in srgb, var(--seed-accent), transparent 88%);
+
+  --danger: var(--seed-danger);
+  --danger-hover: color-mix(in srgb, var(--seed-danger), black 15%);
+  --danger-text: var(--seed-surface);
+  --danger-bg: color-mix(in srgb, var(--seed-danger), transparent 88%);
+  --danger-border: var(--seed-danger);
+
+  --success: var(--seed-success);
+  --success-bg: color-mix(in srgb, var(--seed-success), transparent 88%);
+
+  --focus-ring: color-mix(in srgb, var(--seed-primary), transparent 50%);
+
+  --track-bg: color-mix(in srgb, var(--seed-fg), transparent 80%);
+  --track-fill: var(--seed-primary);
+
+  --overlay-bg: color-mix(in srgb, black, transparent 60%);
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.10);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.14);
+
+  --header-bg: color-mix(in srgb, var(--seed-bg), transparent 28%);
+  --header-border: color-mix(in srgb, var(--seed-fg), transparent 92%);
+
+  --switch-thumb: var(--seed-surface);
+  --switch-thumb-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  --sticker-shareholder: color-mix(in srgb, var(--seed-accent), transparent 85%);
+  --sticker-enjoyer: color-mix(in srgb, var(--seed-success), transparent 82%);
+  --sticker-offer: color-mix(in srgb, var(--seed-primary), transparent 82%);
+  --sticker-worker: color-mix(in srgb, var(--seed-fg), transparent 88%);
+  --sticker-beast: color-mix(in srgb, var(--seed-accent), transparent 78%);
+  --sticker-joker: color-mix(in srgb, var(--seed-joker), transparent 78%);
+  --sticker-volunteer: color-mix(in srgb, var(--seed-volunteer), transparent 80%);
+  --sticker-loser: color-mix(in srgb, var(--seed-fg), transparent 85%);
+}
+
+/* ===== DARK THEME — patch seed tokens, derived tokens auto-update ===== */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --seed-bg: black;
+  --seed-fg: #f5f5f7;
+  --seed-primary: #0a84ff;
+  --seed-accent: #ffb340;
+  --seed-surface: #1c1c1e;
+  --seed-danger: #ff453a;
+  --seed-success: #30d158;
+
+  --page-bg: var(--seed-bg);
+  --page-bg-subtle: color-mix(in srgb, var(--seed-bg), var(--seed-fg) 4%);
+
+  --surface: var(--seed-surface);
+  --surface-secondary: color-mix(in srgb, var(--seed-surface), var(--seed-fg) 8%);
+  --surface-tertiary: color-mix(in srgb, var(--seed-surface), var(--seed-fg) 15%);
+  --surface-elevated: color-mix(in srgb, var(--seed-surface), var(--seed-fg) 4%);
+
+  --text-primary: var(--seed-fg);
+  --text-secondary: color-mix(in srgb, var(--seed-fg), transparent 42%);
+  --text-tertiary: color-mix(in srgb, var(--seed-fg), transparent 58%);
+  --text-inverse: var(--seed-inverse);
+
+  --border-default: color-mix(in srgb, var(--seed-fg), transparent 76%);
+  --border-subtle: color-mix(in srgb, var(--seed-surface), var(--seed-fg) 8%);
+  --border-strong: color-mix(in srgb, var(--seed-fg), transparent 70%);
+
+  --primary: var(--seed-primary);
+  --primary-hover: color-mix(in srgb, var(--seed-primary), white 25%);
+  --primary-active: color-mix(in srgb, var(--seed-primary), black 10%);
+  --primary-text: var(--seed-surface);
+  --primary-bg: color-mix(in srgb, var(--seed-primary), transparent 85%);
+  --primary-bg-strong: color-mix(in srgb, var(--seed-primary), transparent 75%);
+  --primary-border: color-mix(in srgb, var(--seed-primary), transparent 60%);
+
+  --accent: var(--seed-accent);
+  --accent-hover: color-mix(in srgb, var(--seed-accent), white 20%);
+  --accent-text: color-mix(in srgb, var(--seed-accent), white 30%);
+  --accent-bg: color-mix(in srgb, var(--seed-accent), transparent 88%);
+
+  --danger: var(--seed-danger);
+  --danger-hover: color-mix(in srgb, var(--seed-danger), white 20%);
+  --danger-text: var(--seed-surface);
+  --danger-bg: color-mix(in srgb, var(--seed-danger), transparent 85%);
+  --danger-border: color-mix(in srgb, var(--seed-danger), transparent 60%);
+
+  --success: var(--seed-success);
+  --success-bg: color-mix(in srgb, var(--seed-success), transparent 85%);
+
+  --focus-ring: color-mix(in srgb, var(--seed-primary), transparent 40%);
+
+  --track-bg: color-mix(in srgb, var(--seed-surface), var(--seed-fg) 15%);
+  --track-fill: var(--seed-primary);
+
+  --overlay-bg: color-mix(in srgb, black, transparent 40%);
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.6);
+
+  --header-bg: color-mix(in srgb, var(--seed-bg), transparent 28%);
+  --header-border: color-mix(in srgb, var(--seed-fg), transparent 92%);
+
+  --switch-thumb: white;
+  --switch-thumb-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  --sticker-shareholder: color-mix(in srgb, var(--seed-accent), transparent 88%);
+  --sticker-enjoyer: color-mix(in srgb, var(--seed-success), transparent 85%);
+  --sticker-offer: color-mix(in srgb, var(--seed-primary), transparent 85%);
+  --sticker-worker: color-mix(in srgb, var(--seed-fg), transparent 90%);
+  --sticker-beast: color-mix(in srgb, var(--seed-accent), transparent 88%);
+  --sticker-joker: color-mix(in srgb, var(--seed-joker), transparent 88%);
+  --sticker-volunteer: color-mix(in srgb, var(--seed-volunteer), transparent 88%);
+  --sticker-loser: color-mix(in srgb, var(--seed-fg), transparent 90%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) { color-scheme: dark; }
+}
+:root { color-scheme: light dark; }
+[data-theme="light"] { color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }

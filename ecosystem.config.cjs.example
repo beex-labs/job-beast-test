@@ -1,0 +1,18 @@
+// PM2 配置模板 —— 公开仓库使用的占位版本。
+// 部署时复制为 ecosystem.config.cjs 并替换 <...> 占位符为真实值。
+// 真实的 ecosystem.config.cjs 已被 .gitignore 排除，不会进入版本库。
+
+module.exports = {
+  apps: [{
+    name: "beex-worker-api",
+    script: "api/server.js",       // 独立统计 API
+    cwd: "<PATH_TO_APP_ROOT>",
+    env: {
+      NODE_ENV: "production",
+      PORT: <API_PORT>,                  // Nginx 反代 /api/* 到此端口
+      HOSTNAME: "127.0.0.1",
+      // 可选：限制允许的 CORS 来源，逗号分隔。留空则允许所有来源。
+      ALLOWED_ORIGINS: "",
+    },
+  }],
+};

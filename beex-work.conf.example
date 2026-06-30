@@ -1,0 +1,64 @@
+# Nginx 配置模板 —— 公开仓库使用的占位版本。
+# 部署时复制为 beex-work.conf 并替换 <...> 占位符为真实值。
+# 真实的 beex-work.conf 已被 .gitignore 排除，不会进入版本库。
+
+server {
+    listen 80;
+    server_name <YOUR_DOMAIN>;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name <YOUR_DOMAIN>;
+
+    # 替换为你自己的 SSL 证书路径（Let's Encrypt / 自签 / 商业证书均可）。
+    ssl_certificate     <PATH_TO_FULLCHAIN_PEM>;
+    ssl_certificate_key <PATH_TO_PRIVKEY_PEM>;
+
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+    ssl_prefer_server_ciphers on;
+    ssl_session_cache shared:SSL:10m;
+    ssl_session_timeout 1d;
+
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+
+    access_log <PATH_TO_ACCESS_LOG>;
+    error_log  <PATH_TO_ERROR_LOG>;
+
+    # 静态前端由 Nginx 直接提供（Vite 构建产物）。
+    root <PATH_TO_DIST>;
+    index index.html;
+
+    # 长期缓存的构建资源（Vite 带 hash 文件名，可 immutable）。
+    location /assets/ {
+        try_files $uri =404;
+        expires 1y;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+
+    # API 反代到独立 Node 服务。
+    location /api/ {
+        proxy_pass http://127.0.0.1:<API_PORT>;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+
+        proxy_connect_timeout 2s;
+        proxy_send_timeout 3s;
+        proxy_read_timeout 3s;
+    }
+
+    # SPA 路由 fallback：找不到的路径交给前端 index.html。
+    location / {
+        try_files $uri $uri/ /index.html;
+        add_header Cache-Control "no-cache";
+    }
+
+    gzip on;
+    gzip_types text/css application/javascript application/json image/svg+xml;
+
+    client_max_body_size 10m;
+}

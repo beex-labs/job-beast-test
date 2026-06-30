@@ -1,0 +1,31 @@
+{
+  "name": "job-beast-test",
+  "version": "0.2.0",
+  "private": true,
+  "description": "牛马检测器 — 隐私优先、娱乐向的岗位含金量评级实验项目（静态前端 + 独立 API）",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "api": "node api/server.js"
+  },
+  "dependencies": {
+    "preact": "^10.25.4"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.9.5",
+    "@types/node": "^20.19.43",
+    "happy-dom": "^16.7.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11",
+    "vitest": "^3.0.5"
+  },
+  "optionalDependencies": {
+    "html2canvas-pro": "^2.2.1",
+    "qrcode": "^1.5.4"
+  }
+}
